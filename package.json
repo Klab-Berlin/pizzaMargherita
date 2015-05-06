@@ -1,0 +1,19 @@
+{
+  "name": "pizzaMargherita",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Klab-Berlin/pizzaMargherita.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Klab-Berlin/pizzaMargherita/issues"
+  },
+  "homepage": "https://github.com/Klab-Berlin/pizzaMargherita",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
+  }
+}
