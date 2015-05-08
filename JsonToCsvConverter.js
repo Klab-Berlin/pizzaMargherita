@@ -56,7 +56,7 @@ JsonToCsvConverter.prototype.convert = function (objArr) {
         }
     );
 
-    return [keys.join(self.fieldSeparator)].concat(rowsOutput);
+    return [keys.join(self.fieldSeparator)].concat(rowsOutput).join("\n");
 };
 
 /**

@@ -69,38 +69,14 @@ describe('JsonToCsvConverter', function () {
             });
 
             var res = j2c.convert([row1, row2]);
-            expect(res).to.be.instanceof(Array);
-            expect(res).to.have.length(3);
-            expect(res[0]).to.equal(expectedOutputFields);
-            expect(res[1]).to.equal(expectedOutputRow1);
-            expect(res[2]).to.equal(expectedOutputRow2);
             console.log(res);
+            expect(res).to.be.a("string");
+            expect(res).to.equal(expectedOutputFields + "\n" + expectedOutputRow1+ "\n" + expectedOutputRow2);
             done();
         });
 
 
     });
-
-
-    it('should convert demo user', function (done) {
-        var j2c = new Json2Csv({
-            fieldSeparator: ";",
-            listSeparator: "-",
-            memberSeparator: "."
-        });
-
-        var res = j2c.convert([user, user]);
-        expect(res).to.be.instanceof(Array);
-        expect(res).to.have.length(3);
-        //expect(res[0]).to.equal(expectedOutputFields);
-        //expect(res[1]).to.equal(expectedOutputRow1);
-        //expect(res[2]).to.equal(expectedOutputRow2);
-
-        console.log(res);
-        done();
-    });
-
-
 });
 
 
