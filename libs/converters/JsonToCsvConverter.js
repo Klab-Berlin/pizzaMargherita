@@ -2,6 +2,8 @@ var DEFAULT_LIST_SEPARATOR = ',';
 var DEFAULT_FIELD_SEPARATOR = ';';
 var DEFAULT_MEMBER_SEPARATOR = '.';
 
+var csv_to_json_support = require('./CsvToJsonConverter');
+
 /**
  * Converter from JSON to CSV supporting:
  *  - fields having nested objects
@@ -109,5 +111,5 @@ function isArray(val) {
     return Array.isArray(val);
 }
 
-
+csv_to_json_support(JsonToCsvConverter);
 module.exports = JsonToCsvConverter;
