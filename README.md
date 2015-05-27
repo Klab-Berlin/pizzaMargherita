@@ -15,6 +15,7 @@ Converter from JSON to CSV supporting:
 
 Converter from CSV to JSON supporting:
 * fields having nested objects
+* **Does not yet support arrays in csv fields**
 
 ## Instructions
 
