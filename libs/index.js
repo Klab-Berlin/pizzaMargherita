@@ -27,13 +27,6 @@ module.exports = function( config ) {
 				c2j.convert.bind(c2j),
 				callback || function(){}
 			);
-		},
-		jsonToCsvFromFile: function( file, callback ) {
-			readFile(
-				file,
-				j2c.convert.bind(j2c),
-				callback || function() {}
-			);
-		},
+		}
 	};
 };
