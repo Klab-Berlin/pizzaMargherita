@@ -19,12 +19,27 @@ Converter.prototype.convert = function( csv ) {
 		var row = {};
 		var cells = rows[index].split(this.field_seperator);
 		for( var cell in cells ) {
-			row[keys[cell]] = cells[cell].trim();
+			this._insert_value(row, keys[cell], cells[cell].trim());
 		}
 		result.push(row);
 	}
 
 	return result;
+};
+
+Converter.prototype._insert_value = function( row, key, value ) {
+	var path = key.split('.');
+	var into = row;
+	for( var i = 0; i < path.length; i++ ) {
+		var k = path[i];
+		if( i == (path.length-1) )
+			into[k] = value;
+		else {
+			if( typeof into[k] !== 'object' )
+				into[k] = {};
+			into = into[k];
+		}
+	}
 };
 
 Converter.prototype.keys = function( csv ) {
@@ -35,7 +50,7 @@ Converter.prototype.keys = function( csv ) {
 };
 
 Converter.prototype.rows = function( csv ) {
-	return csv.split(this.row_seperator).slice(1);
+	return csv.split(this.row_seperator).slice(1, -1);
 };
 
 module.exports = Converter;

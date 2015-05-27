@@ -1,5 +1,4 @@
 var fs = require('fs');
-var q = require('q');
 var csv_to_json_converter = require('./converters/CsvToJsonConverter');
 var json_to_csv_converter = require('./converters/JsonToCsvConverter');
 
@@ -9,6 +8,7 @@ var readFile = function( file, converter, callback ) {
 			if( error )
 				return callback(error);
 
+			content = content.toString();
 			return callback( null, converter(content) );
 		}
 	);

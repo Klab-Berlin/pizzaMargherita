@@ -18,16 +18,16 @@ describe( 'The csv to json convert', function() {
 	beforeEach(function() {
 		comma_converter = new CsvToJsonConverter(comma_config);
 		comma_csv = (
-			"key, key2, key3, key4\n" +
+			"key, o.key, o.value, key4\n" +
 			"v, v2, v3, v4\n" +
-			"v4, v3, v2, v"
+			"v4, v3, v2, v\n"
 		);
 
 		semicolon_converter = new CsvToJsonConverter(semicolon_config);
 		semicolon_csv = (
-			"key; key2; key3; key4\n" +
+			"key; o.key; o.value; key4\n" +
 			"v; v2; v3; v4\n" +
-			"v4; v3; v2; v"
+			"v4; v3; v2; v\n"
 		);
 	});
 
@@ -49,16 +49,28 @@ describe( 'The csv to json convert', function() {
 	it( 'should create a correct first row', function() {
 		var expected = {
 			key: 'v',
-			key2: 'v2',
-			key3: 'v3',
+			o: {
+				key: 'v2',
+				value: 'v3'
+			},
 			key4: 'v4'
 		};
 		var comma_obj = comma_converter.convert(comma_csv)[0];
 		var semicolon_obj = semicolon_converter.convert(semicolon_csv)[0];
 
-		for( var key in expected ) {
-			expect(comma_obj[key]).to.be.ok.and.eq(expected[key]);
-			expect(semicolon_obj[key]).to.be.ok.and.eq(expected[key]);
-		}
+		expect(comma_obj['key']).to.be.ok.and.eq(expected['key']);
+		expect(semicolon_obj['key']).to.be.ok.and.eq(expected['key']);
+
+		expect(comma_obj['key4']).to.be.ok.and.eq(expected['key4']);
+		expect(semicolon_obj['key4']).to.be.ok.and.eq(expected['key4']);
+
+		expect(comma_obj['o']).to.be.ok;
+		expect(semicolon_obj['o']).to.be.ok;
+
+		expect(comma_obj['o']['key']).to.be.ok.and.eq(expected['o']['key']);
+		expect(semicolon_obj['o']['key']).to.be.ok.and.eq(expected['o']['key']);
+
+		expect(comma_obj['o']['value']).to.be.ok.and.eq(expected['o']['value']);
+		expect(semicolon_obj['o']['value']).to.be.ok.and.eq(expected['o']['value']);
 	});
 });
