@@ -1,13 +1,15 @@
 var defaults = {
-	field_seperator: ',',
+	field_seperator: ';',
 	row_seperator: '\n',
-	member_seperator: '.'
+	member_seperator: '.',
+	list_seperator: ','
 };
 
 var Converter = function( args ) {
-	this.field_seperator = args && args.field_seperator || defaults.field_seperator;
-	this.row_seperator = args && args.row_seperator || defaults.row_seperator;
-	this.member_seperator = args && args.member_seperator || defaults.member_seperator;
+	this.field_seperator = args && args.fieldSeperator || defaults.field_seperator;
+	this.row_seperator = args && args.rowSeperator || defaults.row_seperator;
+	this.member_seperator = args && args.memberSeperator || defaults.member_seperator;
+	this.list_seperator = args && args.listSeperator || defaults.list_seperator;
 };
 
 Converter.prototype.convert = function( csv ) {

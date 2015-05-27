@@ -37,9 +37,10 @@ in plain javascript or reads them from a file for you.
 ## Config
 | key | default | description |
 |-----|---------|-------------|
-| field_seperator | , | Seperator of columns |
-| row_sepereator | \n | Seperator of rows |
-| member_speerator | . | Seperator of object members for nested objects |
+| fieldSeperator | ; | Seperator of columns |
+| listSeperator | , | Seperator of values in an array column |
+| rowSepereator | \n | Seperator of rows |
+| memberSeperator | . | Seperator of object members for nested objects |
 
 ## Api
 

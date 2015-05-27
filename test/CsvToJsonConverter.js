@@ -2,10 +2,12 @@ var expect = require('chai').expect;
 var CsvToJsonConverter = require('../libs/converters/CsvToJsonConverter');
 
 var comma_config = {
-	field_seperator: ','
+	fieldSeperator: ',',
+	listSepeartor: ';'
 };
 var semicolon_config = {
-	field_seperator: ';'
+	fieldSeperator: ';',
+	listSepeartor: ','
 };
 
 var comma_converter;
