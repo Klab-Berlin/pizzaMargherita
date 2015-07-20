@@ -1,4 +1,4 @@
-var KMS = require('../kmicroservice');
+var KMS = require('kmicroservice');
 
 var startup = KMS()
 	.then(
