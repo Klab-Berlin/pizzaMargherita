@@ -3,7 +3,7 @@
 		{
 			"name"        : "kmicro-pizzaMargherita",
 			"script"      : "index.js",
-			"args"        : ["./lib/config/config.js"],
+			"args"        : ["./lib/config/configRelease.js"],
 			"max_memory_restart ": "1000M",
 			"node_args"   : "",
 			"watch"       : false,
