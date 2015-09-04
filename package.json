@@ -1,8 +1,9 @@
 {
   "name": "pizzaMargherita",
   "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "JsonToCsvConverter.js",
+  "main": "lib/exports/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Klab-Berlin/pizzaMargherita.git"
@@ -12,6 +13,9 @@
   },
   "homepage": "https://github.com/Klab-Berlin/pizzaMargherita",
   "dependencies": {
+    "bunyan-format": "^0.2.1",
+    "kmicroservice": "git+ssh://git@github.com:Klab-Berlin/kmicroservice.git",
+    "q": "^1.4.1"
   },
   "devDependencies": {
     "chai": "^2.3.0",
