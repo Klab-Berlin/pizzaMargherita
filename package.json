@@ -1,6 +1,6 @@
 {
   "name": "pizzaMargherita",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/exports/index.js",
   "repository": {
