@@ -1,6 +1,5 @@
 {
   "name": "pizzaMargherita",
-  "version": "1.0.0",
   "version": "0.1.0",
   "description": "",
   "main": "lib/exports/index.js",
@@ -14,7 +13,7 @@
   "homepage": "https://github.com/Klab-Berlin/pizzaMargherita",
   "dependencies": {
     "bunyan-format": "^0.2.1",
-    "kmicroservice": "git+ssh://git@github.com:Klab-Berlin/kmicroservice.git",
+    "kmicroservice": "git+ssh://git@github.com:Klab-Berlin/kmicroservice.git#v1.0.0",
     "q": "^1.4.1"
   },
   "devDependencies": {
