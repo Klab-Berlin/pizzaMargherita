@@ -13,7 +13,7 @@
   "homepage": "https://github.com/Klab-Berlin/pizzaMargherita",
   "dependencies": {
     "bunyan-format": "^0.2.1",
-    "kmicroservice": "git+ssh://git@github.com:Klab-Berlin/kmicroservice.git#v1.0.0",
+    "kmicroservice": "git+ssh://git@github.com:Klab-Berlin/kmicroservice.git#kms_rl_1.2",
     "q": "^1.4.1"
   },
   "devDependencies": {
