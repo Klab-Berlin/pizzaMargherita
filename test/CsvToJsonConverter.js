@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var CsvToJsonConverter = require('../libs/converters/CsvToJsonConverter');
+var CsvToJsonConverter = require('../lib/converters/CsvToJsonConverter');
 
 var comma_config = {
 	fieldSeperator: ',',

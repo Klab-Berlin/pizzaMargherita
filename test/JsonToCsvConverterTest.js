@@ -1,7 +1,7 @@
 // Assertion tools
 var expect = require('chai').expect;
 
-var Json2Csv = require('../libs/converters/JsonToCsvConverter');
+var Json2Csv = require('../lib/converters/JsonToCsvConverter');
 var user = require("./user");
 
 var row1 = {
