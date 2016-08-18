@@ -1,0 +1,20 @@
+FROM klabberlin/node:0.10.38
+MAINTAINER Max Kimambo <max.kimambo@klab-berlin.com>
+
+ARG GITHUB_KEY=github.key
+ENV NODE_ENV=Staging
+
+WORKDIR /srv/www
+
+#Add git key to checkout code
+ADD $GITHUB_KEY /root/.ssh/id_rsa
+RUN chmod 700 /root/.ssh/id_rsa
+
+RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
+
+ADD package.json /srv/www
+COPY . /srv/www
+
+RUN npm install
+
+ENTRYPOINT ["node", "index.js"]

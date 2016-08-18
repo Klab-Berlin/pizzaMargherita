@@ -1,4 +1,5 @@
-var config = require(__dirname + '/' + process.argv[2]);
+var configName = 'config' + process.env.NODE_ENV;
+var config = require(__dirname + '/lib/config/' + configName);
 var kmicroservice = require('kmicroservice');
 
 var microservice = new kmicroservice('pizzaMargherita', config);
