@@ -2,7 +2,7 @@ FROM node:4.5.0
 MAINTAINER Max Kimambo <max.kimambo@klab-berlin.com>
 
 ARG GITHUB_KEY=github.key
-ENV NODE_ENV=Staging
+ENV NODE_ENV=Production
 
 RUN mkdir -p /var/opt/pizzaMargherita
 WORKDIR /var/opt/pizzaMargherita
