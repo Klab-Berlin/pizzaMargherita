@@ -18,4 +18,6 @@ COPY . /var/opt/pizzaMargherita
 
 RUN npm install
 
+RUN mkdir -p /var/opt/pizzaMargherita/lib/uploads
+
 ENTRYPOINT ["node", "index.js"]
