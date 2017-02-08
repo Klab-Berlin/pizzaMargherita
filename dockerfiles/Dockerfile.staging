@@ -15,6 +15,7 @@ RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 ADD package.json /var/opt/pizzaMargherita
 COPY . /var/opt/pizzaMargherita
+RUN mkdir -p /var/opt/pizzaMargherita/lib/uploads
 
 RUN npm install
 
